@@ -1,7 +1,11 @@
 import javax.swing.*;
 
 public class ToDoListGui extends JFrame {
+  // taskPanel will act as the container for the taskcomponentpanel
+  // taskComponent will store all of the taskcomponents
 
+
+  private JPanel taskPanel, taskComponentPanel;
   public ToDoListGui(){
     super("To Do List Application");
     setDefaultCloseOperation(EXIT_ON_CLOSE);
