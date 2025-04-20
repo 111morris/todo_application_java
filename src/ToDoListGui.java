@@ -2,8 +2,9 @@ import netscape.javascript.JSObject;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
-public class ToDoListGui extends JFrame {
+public class ToDoListGui extends JFrame implements ActionListener {
   // taskPanel will act as the container for the taskcomponentpanel
   // taskComponent will store all of the taskcomponents
 
@@ -45,7 +46,11 @@ public class ToDoListGui extends JFrame {
     scrollpane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
     scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-
+    // add task button
+    JButton addTaskButton = new JButton("Add Task");
+    addTaskButton.setBounds(-5, CommonConstants.GUI_SIZE.height -88,
+        CommonConstants.ADDTASK_BUTTON.width, CommonConstants.ADDTASK_BUTTON.height);
+    addTaskButton.addActionListener(this);
     // ad to frame
     this.getContentPane().add(bannerLabel);
     this.getContentPane().add(scrollpane);
