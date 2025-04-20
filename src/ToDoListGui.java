@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class ToDoListGui extends JFrame {
   // taskPanel will act as the container for the taskcomponentpanel
@@ -26,6 +27,18 @@ public class ToDoListGui extends JFrame {
         CommonConstants.BANNER_SIZE.width,
         CommonConstants.BANNER_SIZE.height
     );
+
+    // taskpnale
+    taskPanel = new JPanel();
+
+    // taskComponentPanel
+    taskComponentPanel = new JPanel();
+    taskComponentPanel.setLayout(new BoxLayout(taskComponentPanel, BoxLayout.Y_AXIS));
+    taskPanel.add(taskComponentPanel);
+
+    // add scrolling to teh task panel
+    JScrollPane scrollpane = new JScrollPane(taskPanel);
+    scrollpane.setBounds();
 
     // ad to frame
     this.getContentPane().add(bannerLabel);
