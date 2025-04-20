@@ -1,3 +1,5 @@
+import netscape.javascript.JSObject;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -38,9 +40,14 @@ public class ToDoListGui extends JFrame {
 
     // add scrolling to teh task panel
     JScrollPane scrollpane = new JScrollPane(taskPanel);
-    scrollpane.setBounds();
+    scrollpane.setBounds(8,78, CommonConstants.TASKPANEL_SIZE.width, CommonConstants.TASKPANEL_SIZE.height);
+    scrollpane.setMaximumSize(CommonConstants.TASKPANEL_SIZE);
+    scrollpane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+    scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+
 
     // ad to frame
     this.getContentPane().add(bannerLabel);
+    this.getContentPane().add(scrollpane);
   }
 }
