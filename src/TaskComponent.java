@@ -21,9 +21,13 @@ public class TaskComponent extends JPanel {
     checkBox.setPreferredSize(CommonConstants.CHECKBOX_SIZE);
 
     // delete button
+    deleteButton = new JButton("X");
+//    deleteButton.setPreferredSize();
+
 
     //add to this taskcomponent
     add(taskField);
     add(checkBox);
+    add(deleteButton);
   }
 }
