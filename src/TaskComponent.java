@@ -22,7 +22,7 @@ public class TaskComponent extends JPanel {
 
     // delete button
     deleteButton = new JButton("X");
-//    deleteButton.setPreferredSize();
+    deleteButton.setPreferredSize(CommonConstants.DELETE_BUTTON_SIZE);
 
 
     //add to this taskcomponent

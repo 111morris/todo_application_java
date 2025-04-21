@@ -55,6 +55,7 @@ public class ToDoListGui extends JFrame implements ActionListener {
     // ad to frame
     this.getContentPane().add(bannerLabel);
     this.getContentPane().add(scrollpane);
+    this.getContentPane().add(addTaskButton);
   }
 
   @Override
@@ -65,7 +66,9 @@ public class ToDoListGui extends JFrame implements ActionListener {
       TaskComponent taskComponent = new TaskComponent(taskComponentPanel);
       taskComponentPanel.add(taskComponent);
 
+
       // make the task field request focus after creation
+
     }
   }
 }
