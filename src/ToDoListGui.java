@@ -19,7 +19,6 @@ public class ToDoListGui extends JFrame implements ActionListener {
     setLocationRelativeTo(null);
     setResizable(false);
     setLayout(null);
-
     addGuiComponent();
   }
   private void addGuiComponent() {
