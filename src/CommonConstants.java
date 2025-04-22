@@ -17,5 +17,6 @@ public class CommonConstants {
   public static final Dimension TASKFIELD_SIZE = new Dimension((int)(TASKPANEL_SIZE.width * 0.85), 50);
 
   public static final Dimension CHECKBOX_SIZE  = new Dimension((int)(TASKPANEL_SIZE.width * 0.05), 50);
+
   public static final Dimension DELETE_BUTTON_SIZE =new Dimension((int)(TASKPANEL_SIZE.width * 0.18),50);
 }
