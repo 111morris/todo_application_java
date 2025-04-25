@@ -29,5 +29,6 @@ public class TaskComponent extends JPanel {
     add(taskField);
     add(checkBox);
     add(deleteButton);
+
   }
 }
