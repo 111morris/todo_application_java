@@ -5,6 +5,9 @@ public class TaskComponent extends JPanel {
   private JTextPane taskField;
   private JButton deleteButton;
 
+  public JTextPane getTaskField(){
+    return taskField;
+  }
   // this panel is used so that we can make updates to the task component panel when deleting tasks
   private JPanel parentPanl;
   public TaskComponent(JPanel parentPanl){
