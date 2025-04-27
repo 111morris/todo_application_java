@@ -28,6 +28,7 @@ public class TaskComponent extends JPanel implements ActionListener {
     // delete button
     deleteButton = new JButton("X");
     deleteButton.setPreferredSize(CommonConstants.DELETE_BUTTON_SIZE);
+    deleteButton.addActionListener(this);
 
     //add to this taskcomponent
     add(checkBox);
@@ -48,6 +49,11 @@ public class TaskComponent extends JPanel implements ActionListener {
     } else if (!checkBox.isSelected()){
       String taskText = taskField.getText().replaceAll("<[^>]*>","");
       taskField.setText(taskText);
+    }
+
+    if(e.getActionCommand().equalsIgnoreCase("X")){
+      // delete this component from teh parent panel
+      parentPanl.remove(this);
     }
 
   }
