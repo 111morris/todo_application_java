@@ -47,7 +47,6 @@ public class TaskComponent extends JPanel implements ActionListener {
 
     } else if (!checkBox.isSelected()){
       String taskText = taskField.getText().replaceAll("<[^>]*>","");
-
       taskField.setText(taskText);
     }
 
