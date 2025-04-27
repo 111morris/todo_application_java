@@ -1,13 +1,10 @@
-import netscape.javascript.JSObject;
-
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ToDoListGui extends JFrame implements ActionListener {
   // taskPanel will act as the container for the taskcomponentpanel
-  // taskComponent will store all of the taskcomponents
+  // taskComponent will store all the taskcomponents
 
 
   private JPanel taskPanel, taskComponentPanel;
@@ -66,6 +63,8 @@ public class ToDoListGui extends JFrame implements ActionListener {
       taskComponentPanel.add(taskComponent);
 
       // make the task field request focus after creation
+
+      //continue from this error
       taskComponent.getTaskField().requestFocus();
       repaint();
       revalidate();
