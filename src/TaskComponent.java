@@ -54,6 +54,8 @@ public class TaskComponent extends JPanel implements ActionListener {
     if(e.getActionCommand().equalsIgnoreCase("X")){
       // delete this component from teh parent panel
       parentPanl.remove(this);
+      parentPanl.repaint();
+      parentPanl.revalidate();
     }
 
   }
