@@ -36,22 +36,23 @@ public class ToDoListGui extends JFrame implements ActionListener {
     taskComponentPanel.setLayout(new BoxLayout(taskComponentPanel, BoxLayout.Y_AXIS));
     taskPanel.add(taskComponentPanel);
 
-    // add scrolling to teh task panel
-    JScrollPane scrollpane = new JScrollPane(taskPanel);
-    scrollpane.setBounds(8,78, CommonConstants.TASKPANEL_SIZE.width, CommonConstants.TASKPANEL_SIZE.height);
-    scrollpane.setMaximumSize(CommonConstants.TASKPANEL_SIZE);
-    scrollpane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-    scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+    // add scrolling to the task panel
+    JScrollPane scrollPane = new JScrollPane(taskPanel);
+    scrollPane.setBounds(8,78, CommonConstants.TASKPANEL_SIZE.width, CommonConstants.TASKPANEL_SIZE.height);
+    scrollPane.setMaximumSize(CommonConstants.TASKPANEL_SIZE);
+    scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+    scrollPane.setHorizontalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+
 
     // add task button
     JButton addTaskButton = new JButton("Add Task");
     addTaskButton.setBounds(-5, CommonConstants.GUI_SIZE.height -88,
-        CommonConstants.ADDTASK_BUTTON.width, CommonConstants.ADDTASK_BUTTON.height);
+        CommonConstants.ADDtASK_BUTTON_SIZE.width, CommonConstants.ADDtASK_BUTTON_SIZE.height);
     addTaskButton.addActionListener(this);
 
     // add to frame
     this.getContentPane().add(bannerLabel);
-    this.getContentPane().add(scrollpane);
+    this.getContentPane().add(scrollPane);
     this.getContentPane().add(addTaskButton);
   }
 
