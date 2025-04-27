@@ -10,7 +10,6 @@ public class TaskComponent extends JPanel {
   public TaskComponent(JPanel parentPanl){
     this.parentPanl = parentPanl;
 
-
     // task field
     taskField = new JTextPane();
     taskField.setPreferredSize(CommonConstants.TASKFIELD_SIZE);
@@ -23,7 +22,6 @@ public class TaskComponent extends JPanel {
     // delete button
     deleteButton = new JButton("X");
     deleteButton.setPreferredSize(CommonConstants.DELETE_BUTTON_SIZE);
-
 
     //add to this taskcomponent
     add(taskField);

@@ -47,7 +47,7 @@ public class ToDoListGui extends JFrame implements ActionListener {
     // add task button
     JButton addTaskButton = new JButton("Add Task");
     addTaskButton.setBounds(-5, CommonConstants.GUI_SIZE.height -88,
-        CommonConstants.ADDtASK_BUTTON_SIZE.width, CommonConstants.ADDtASK_BUTTON_SIZE.height);
+        CommonConstants.ADDTASK_BUTTON_SIZE.width, CommonConstants.ADDTASK_BUTTON_SIZE.height);
     addTaskButton.addActionListener(this);
 
     // add to frame
