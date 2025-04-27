@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class TaskComponent extends JPanel {
+public class TaskComponent extends JPanel implements ActionListener {
   private JCheckBox checkBox;
   private JTextPane taskField;
   private JButton deleteButton;
@@ -21,6 +23,7 @@ public class TaskComponent extends JPanel {
     // checkbox
     checkBox = new JCheckBox();
     checkBox.setPreferredSize(CommonConstants.CHECKBOX_SIZE);
+    checkBox.addActionListener(this);
 
     // delete button
     deleteButton = new JButton("X");
@@ -31,5 +34,12 @@ public class TaskComponent extends JPanel {
     add(taskField);
     add(deleteButton);
 
+  }
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    if(checkBox.isSelected()){
+      //replace all the html tags to empty string to grab the main text
+    }
   }
 }
