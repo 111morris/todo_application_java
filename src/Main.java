@@ -7,6 +7,7 @@ public class Main {
       @Override
       public void run() {
         new ToDoListGui().setVisible(true);
+        new ToDoListGui().setVisible(false);
       }
     });
   }
