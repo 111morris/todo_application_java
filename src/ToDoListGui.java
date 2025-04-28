@@ -43,7 +43,6 @@ public class ToDoListGui extends JFrame implements ActionListener {
     scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
     scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-
     // add task button
     JButton addTaskButton = new JButton("Add Task");
     addTaskButton.setBounds(-5, CommonConstants.GUI_SIZE.height -88,

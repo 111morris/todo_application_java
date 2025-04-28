@@ -34,7 +34,6 @@ public class TaskComponent extends JPanel implements ActionListener {
     add(checkBox);
     add(taskField);
     add(deleteButton);
-
   }
 
   @Override
