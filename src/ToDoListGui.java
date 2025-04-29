@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+
+import static jdk.internal.jrtfs.JrtFileAttributeView.AttrID.size;
 
 public class ToDoListGui extends JFrame implements ActionListener {
   // taskPanel will act as the container for the taskcomponentpanel
@@ -63,6 +66,13 @@ public class ToDoListGui extends JFrame implements ActionListener {
     //check to see if the path contains a folder with specis in them
     if(filePath.contains("%20")){
       filePath = getClass().getClassLoader().getResource(resource).getPath().replaceAll("%20"," ");
+    }
+    //create font
+
+    try{
+      File customFontFile = new File(filePath);
+      Font custonmFont = Font.createFont(Font.TRUETYPE_FONT, customFontFile).deriveFont(size);
+      return custonmFont;
     }
   }
   @Override
