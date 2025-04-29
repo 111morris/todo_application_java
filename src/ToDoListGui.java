@@ -73,6 +73,8 @@ public class ToDoListGui extends JFrame implements ActionListener {
       File customFontFile = new File(filePath);
       Font custonmFont = Font.createFont(Font.TRUETYPE_FONT, customFontFile).deriveFont(size);
       return custonmFont;
+    } catch(Exception e) {
+      System.out.println("Error: "+ e);
     }
   }
   @Override
