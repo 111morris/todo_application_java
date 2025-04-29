@@ -61,6 +61,9 @@ public class ToDoListGui extends JFrame implements ActionListener {
     String filePath = getClass().getClassLoader().getResource(resource).getPath();
 
     //check to see if the path contains a folder with specis in them
+    if(filePath.contains("%20")){
+      filePath = getClass().getClassLoader().getResource(resource).getPath().replaceAll("%20"," ");
+    }
   }
   @Override
   public void actionPerformed(ActionEvent e) {
