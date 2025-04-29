@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,6 +22,7 @@ public class ToDoListGui extends JFrame implements ActionListener {
   private void addGuiComponent() {
     //banner text
     JLabel bannerLabel = new JLabel("To Do List");
+    bannerLabel.setFont(createFont("resources/NightmarePills-BV2w.ttf"));
     bannerLabel.setBounds(
         (CommonConstants.GUI_SIZE.width - bannerLabel.getPreferredSize().width)/2,
         15,
@@ -54,7 +56,12 @@ public class ToDoListGui extends JFrame implements ActionListener {
     this.getContentPane().add(scrollPane);
     this.getContentPane().add(addTaskButton);
   }
+  private Font createFont(String resource){
+    //get the font file path
+    String filePath = getClass().getClassLoader().getResource(resource).getPath();
 
+    //check to see if the path contains a folder with specis in them
+  }
   @Override
   public void actionPerformed(ActionEvent e) {
     String command = e.getActionCommand();
