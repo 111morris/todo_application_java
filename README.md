@@ -12,3 +12,12 @@ A simple, stylish desktop To-Do List app built with Java Swing. This application
 - Scrollable task list for easy navigation.
 - Custom font support for a personalized UI.
 
+---
+
+## 📁 Project Structure
+
+```plaintext
+src/
+├── Main.java               # Application entry point
+├── ToDoListGui.java        # Main GUI window logic and layout
+├── Task
