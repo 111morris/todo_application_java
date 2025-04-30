@@ -21,3 +21,13 @@ src/
 ├── Main.java               # Application entry point
 ├── ToDoListGui.java        # Main GUI window logic and layout
 ├── Task
+```
+
+---
+# Cloning the repository
+```commandline
+git clone https://github.com/your-username/java-todo-list-app.git
+
+cd java-todo-list-app
+```
+
