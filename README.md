@@ -27,7 +27,12 @@ src/
 # Cloning the repository
 ```commandline
 git clone https://github.com/your-username/java-todo-list-app.git
-
 cd java-todo-list-app
 ```
 
+# Compile and run
+- from the root project directory:
+```commandline
+javac -d out -sourcepath src src/Main.java
+java -cp out Main
+```
