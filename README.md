@@ -36,3 +36,18 @@ cd java-todo-list-app
 javac -d out -sourcepath src src/Main.java
 java -cp out Main
 ```
+
+---
+
+## 🔧 Future Improvements
+
+Here are some enhancements planned for future versions of the app:
+
+- 💾 **Task Persistence**: Save and load tasks between sessions using a local file.
+- ✅ **Input Validation**: Prevent adding empty or whitespace-only tasks.
+- 🎨 **Responsive UI**: Replace fixed layout with layout managers for better resizing and scaling.
+- 🌙 **Dark Mode / Themes**: Let users choose between different UI themes.
+- 🌍 **Internationalization**: Support multiple languages using `ResourceBundle`.
+- 🧪 **Unit Testing**: Add automated tests using JUnit to ensure code quality.
+- 📦 **Font Fallback**: Handle missing or invalid font files more gracefully.
+
