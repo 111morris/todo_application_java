@@ -35,7 +35,6 @@ public class TaskComponent extends JPanel implements ActionListener {
     add(taskField);
     add(deleteButton);
   }
-
   @Override
   public void actionPerformed(ActionEvent e) {
     if(checkBox.isSelected()){
