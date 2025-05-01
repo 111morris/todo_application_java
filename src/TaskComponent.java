@@ -49,7 +49,6 @@ public class TaskComponent extends JPanel implements ActionListener {
       String taskText = taskField.getText().replaceAll("<[^>]*>","");
       taskField.setText(taskText);
     }
-
     if(e.getActionCommand().equalsIgnoreCase("X")){
       // delete this component from teh parent panel
       parentPanl.remove(this);
