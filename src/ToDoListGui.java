@@ -76,7 +76,7 @@ public class ToDoListGui extends JFrame implements ActionListener {
     } catch(Exception e) {
       System.out.println("Error: "+ e);
     }
-    return 
+    return ;
   }
   @Override
   public void actionPerformed(ActionEvent e) {
