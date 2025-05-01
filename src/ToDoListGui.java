@@ -59,6 +59,7 @@ public class ToDoListGui extends JFrame implements ActionListener {
     this.getContentPane().add(scrollPane);
     this.getContentPane().add(addTaskButton);
   }
+  /*
   private Font createFont(String resource){
     //get the font file path
     String filePath = getClass().getClassLoader().getResource(resource).getPath();
@@ -78,6 +79,7 @@ public class ToDoListGui extends JFrame implements ActionListener {
     }
     return ;
   }
+   */
   @Override
   public void actionPerformed(ActionEvent e) {
     String command = e.getActionCommand();
