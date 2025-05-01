@@ -14,6 +14,7 @@ public class TaskComponent extends JPanel implements ActionListener {
   private JPanel parentPanl;
   public TaskComponent(JPanel parentPanl){
     this.parentPanl = parentPanl;
+
     // task field
     taskField = new JTextPane();
     taskField.setPreferredSize(CommonConstants.TASKFIELD_SIZE);
@@ -55,6 +56,5 @@ public class TaskComponent extends JPanel implements ActionListener {
       parentPanl.repaint();
       parentPanl.revalidate();
     }
-
   }
 }
