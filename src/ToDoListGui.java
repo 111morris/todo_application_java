@@ -25,7 +25,7 @@ public class ToDoListGui extends JFrame implements ActionListener {
   private void addGuiComponent() {
     //banner text
     JLabel bannerLabel = new JLabel("To Do List");
-    bannerLabel.setFont(createFont("resources/NightmarePills-BV2w.ttf"));
+    //bannerLabel.setFont(createFont("resources/NightmarePills-BV2w.ttf"));
     bannerLabel.setBounds(
         (CommonConstants.GUI_SIZE.width - bannerLabel.getPreferredSize().width)/2,
         15,
