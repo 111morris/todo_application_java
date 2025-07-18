@@ -39,10 +39,6 @@ public class TaskComponent extends JPanel implements ActionListener {
   @Override
   public void actionPerformed(ActionEvent e) {
     if(checkBox.isSelected()){
-      //replace all the html tags to empty string to grab the main text
-      String taskText = taskField.getText().replaceAll("<[^>]*>","");
-      //add strikethough text
-      taskField.setText("<html><s>" + taskText + "</s></html>");
 
     } else if (!checkBox.isSelected()){
       String taskText = taskField.getText().replaceAll("<[^>]*>","");
