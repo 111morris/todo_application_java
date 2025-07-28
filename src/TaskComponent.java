@@ -30,7 +30,7 @@ public class TaskComponent extends JPanel implements ActionListener {
     deleteButton.setPreferredSize(CommonConstants.DELETE_BUTTON_SIZE);
     deleteButton.addActionListener(this);
 
-    //add to this taskcomponent
+    //add to this task component
     add(checkBox);
     add(taskField);
     add(deleteButton);
