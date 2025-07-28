@@ -14,22 +14,18 @@ public class TaskComponent extends JPanel implements ActionListener {
   private JPanel parentPanl;
   public TaskComponent(JPanel parentPanl){
     this.parentPanl = parentPanl;
-
     // task field
     taskField = new JTextPane();
     taskField.setPreferredSize(CommonConstants.TASKFIELD_SIZE);
     taskField.setContentType("text/html");
-
     // checkbox
     checkBox = new JCheckBox();
     checkBox.setPreferredSize(CommonConstants.CHECKBOX_SIZE);
     checkBox.addActionListener(this);
-
     // delete button
     deleteButton = new JButton("X");
     deleteButton.setPreferredSize(CommonConstants.DELETE_BUTTON_SIZE);
     deleteButton.addActionListener(this);
-
     //add to this task component
     add(checkBox);
     add(taskField);
@@ -43,12 +39,10 @@ public class TaskComponent extends JPanel implements ActionListener {
       String taskText = taskField.getText().replaceAll("<[^>]*>","");
       //add strikethough text
       taskField.setText("<html><s>" + taskText + "</s></html>");
-
     } else if (!checkBox.isSelected()){
       String taskText = taskField.getText().replaceAll("<[^>]*>","");
       taskField.setText(taskText);
     }
-
     if(e.getActionCommand().equalsIgnoreCase("X")){
       // delete this component from teh parent panel
       parentPanl.remove(this);
