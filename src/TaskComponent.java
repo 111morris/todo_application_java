@@ -20,6 +20,10 @@ public class TaskComponent extends JPanel implements ActionListener {
     taskField.setPreferredSize(CommonConstants.TASKFIELD_SIZE);
     taskField.setContentType("text/html");
 
+    // checkbox
+    checkBox = new JCheckBox();
+    checkBox.setPreferredSize(CommonConstants.CHECKBOX_SIZE);
+    checkBox.addActionListener(this);
 
     // delete button
     deleteButton = new JButton("X");
