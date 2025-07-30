@@ -13,23 +13,7 @@ public class TaskComponent extends JPanel implements ActionListener {
   // this panel is used so that we can make updates to the task component panel when deleting tasks
   private JPanel parentPanl;
   public TaskComponent(JPanel parentPanl){
-    this.parentPanl = parentPanl;
-    // task field
-    taskField = new JTextPane();
-    taskField.setPreferredSize(CommonConstants.TASKFIELD_SIZE);
-    taskField.setContentType("text/html");
-    // checkbox
-    checkBox = new JCheckBox();
-    checkBox.setPreferredSize(CommonConstants.CHECKBOX_SIZE);
-    checkBox.addActionListener(this);
-    // delete button
-    deleteButton = new JButton("X");
-    deleteButton.setPreferredSize(CommonConstants.DELETE_BUTTON_SIZE);
-    deleteButton.addActionListener(this);
-    //add to this task component
-    add(checkBox);
-    add(taskField);
-    add(deleteButton);
+
   }
 
   @Override
