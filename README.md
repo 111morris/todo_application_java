@@ -5,13 +5,6 @@ A simple, stylish desktop To-Do List app built with Java Swing. This application
 ---
 
 ## 💡 Features
-
-- Add new tasks with a click.
-- Mark tasks as completed using a checkbox (adds strikethrough).
-- Remove tasks instantly with a delete button.
-- Scrollable task list for easy navigation.
-- Custom font support for a personalized UI.
-
 ---
 
 ## 📁 Project Structure
