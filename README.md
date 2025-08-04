@@ -44,5 +44,3 @@ Here are some enhancements planned for future versions of the app:
 - 🌍 **Internationalization**: Support multiple languages using `ResourceBundle`.
 - 🧪 **Unit Testing**: Add automated tests using JUnit to ensure code quality.
 - 📦 **Font Fallback**: Handle missing or invalid font files more gracefully.
-
-h 
