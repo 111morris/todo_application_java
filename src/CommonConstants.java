@@ -17,4 +17,17 @@ public class CommonConstants {
   public static final Dimension TASKFIELD_SIZE = new Dimension((int)(TASKPANEL_SIZE.width * 0.85), 50);
   public static final Dimension CHECKBOX_SIZE  = new Dimension((int)(TASKPANEL_SIZE.width * 0.05), 50);
   public static final Dimension DELETE_BUTTON_SIZE =new Dimension((int)(TASKPANEL_SIZE.width * 0.18),50);
+
+  // colors (Nimbus friendly)
+  public static final Color PRIMARY     = new Color(0x2196F3);
+    public static final Color PRIMARY_DARK= new Color(0x1976D2);
+    public static final Color DONE_GRAY   = new Color(0x9E9E9E);
+    public static final Color ERROR_RED   = new Color(0xF44336);
+
+    // font
+    public static final Font  FONT_BIG  = new Font("Segoe UI", Font.PLAIN, 26);
+    public static final Font  FONT_REG  = new Font("Segoe UI", Font.PLAIN, 14);
+
+    // serial file
+    public static final String STORAGE_FILE = "todo.ser";
 }
