@@ -11,7 +11,7 @@ public class TaskComponent extends JPanel implements ActionListener {
     return taskField;
   }
   // this panel is used so that we can make updates to the task component panel when deleting tasks
-  private JPanel parentPanl;
+    private JPanel parentPanl;
   public TaskComponent(JPanel parentPanl){
     this.parentPanl = parentPanl;
     // task field
@@ -31,6 +31,7 @@ public class TaskComponent extends JPanel implements ActionListener {
     add(taskField);
     add(deleteButton);
   }
+
 
   @Override
   public void actionPerformed(ActionEvent e) {
