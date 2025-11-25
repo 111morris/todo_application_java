@@ -1,14 +1,15 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.text;
-import java.awt;
-import java.awt.event;
+import javax.swing.text.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.font.TextAttribute;
+import java.util.Map;
+import java.util.HashMap;
 
-public class TaskComponent extends JPanel implements ActionListener {
-  private JCheckBox checkBox;
-  private JTextPane taskField;
-  private JButton deleteButton;
+public class TaskComponent extends JPanel {
+
   private static final long serialVersionUID = 1L;
 
     private final JTextField field;
@@ -56,11 +57,10 @@ public class TaskComponent extends JPanel implements ActionListener {
     }
 
     private void toggleStyle(){
-        StyledDocument doc = (StyledDocument) field.getDocument();
-        SimpleAttributeSet attr = new SimpleAttributeSet();
-        StyleConstants.setStrikeThrough(attr, check.isSelected());
-        StyleConstants.setForeground(attr, check.isSelected() ? CommonConstants.DONE_GRAY : Color.BLACK);
-        doc.setCharacterAttributes(0, doc.getLength(), attr, true);
+        Map<TextAttribute, Object> attributes = new HashMap<>(field.getFont().getAttributes());
+        attributes.put(TextAttribute.STRIKETHROUGH, check.isSelected());
+        field.setFont(field.getFont().deriveFont(attributes));
+        field.setForeground(check.isSelected() ? CommonConstants.DONE_GRAY : Color.BLACK);
         onChange.run();
     }
 
@@ -89,48 +89,8 @@ public class TaskComponent extends JPanel implements ActionListener {
 
 
 
-  public JTextPane getTaskField(){
-    return taskField;
-  }
-  // this panel is used so that we can make updates to the task component panel when deleting tasks
-    private JPanel parentPanl;
-  public TaskComponent(JPanel parentPanl){
-    this.parentPanl = parentPanl;
-    // task field
-    taskField = new JTextPane();
-    taskField.setPreferredSize(CommonConstants.TASKFIELD_SIZE);
-    taskField.setContentType("text/html");
-    // checkbox
-    checkBox = new JCheckBox();
-    checkBox.setPreferredSize(CommonConstants.CHECKBOX_SIZE);
-    checkBox.addActionListener(this);
-    // delete button
-    deleteButton = new JButton("X");
-    deleteButton.setPreferredSize(CommonConstants.DELETE_BUTTON_SIZE);
-    deleteButton.addActionListener(this);
-    //add to this task component
-    add(checkBox);
-    add(taskField);
-    add(deleteButton);
-  }
 
-
-  @Override
-  public void actionPerformed(ActionEvent e) {
-    if(checkBox.isSelected()){
-      //replace all the html tags to empty string to grab the main text
-      String taskText = taskField.getText().replaceAll("<[^>]*>","");
-      //add strike though text
-      taskField.setText("<html><s>" + taskText + "</s></html>");
-    } else if (!checkBox.isSelected()){
-      String taskText = taskField.getText().replaceAll("<[^>]*>","");
-      taskField.setText(taskText);
+    public void requestFocus() {
+        field.requestFocus();
     }
-    if(e.getActionCommand().equalsIgnoreCase("X")){
-      // delete this component from teh parent panel
-      parentPanl.remove(this);
-      parentPanl.repaint();
-      parentPanl.revalidate();
-    }
-  }
 }
